@@ -3,7 +3,8 @@ import { BrowserRouter, Route, Routes } from "react-router";
 
 import { lazy } from "react";
 // Đây là import bất đồng bộ
-const Counter = lazy(() => import("@/page/Counter"));
+const Example1 = lazy(() => import("@/page/Example1"));
+const Example2 = lazy(() => import("@/page/Example2"));
 
 // Page
 
@@ -14,11 +15,9 @@ const Counter = lazy(() => import("@/page/Counter"));
 function AppRouter() {
   return (
     <BrowserRouter>
-      {/* <Loading /> */}
-      <AuthProvider />
-      <Header />
       <Routes>
-        <Route path="counter" element={<Counter />}></Route>
+        <Route path="example1" element={<Example1 />}></Route>
+        <Route path="example2" element={<Example2 />}></Route>
       </Routes>
     </BrowserRouter>
   );
