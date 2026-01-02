@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/*
+- Sử dụng  layer để xét độ ưu tiên cái nào sẽ ăn thuộc tính 
+- layer viết sau sẽ ăn layer viết trc
+ */
+@layer layer1, layer2;
+
+@layer layer1 {
+  #text-red {
+    color: red;
+  }
+}
+
+@layer layer2 {
+  .text-red {
+    color: yellow;
+  }
+}
+
+@theme {
+  --card-width: 384px;
+}
