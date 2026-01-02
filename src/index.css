@@ -21,3 +21,20 @@
 @theme {
   --card-width: 384px;
 }
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@layer components {
+  .card {
+    background-color: var(--color-white);
+    border-radius: var(--radius-lg);
+    padding: --spacing(6);
+    box-shadow: var(--shadow-xl);
+  }
+}
+
+@layer components {
+  .my-card {
+    @apply @container flex h-dvh items-center justify-center dark:bg-gray-800;
+  }
+}
